@@ -35,5 +35,4 @@ func TestFormPost(t *testing.T) {
 	response := recorder.Result()
 	body, _ := io.ReadAll(response.Body)
 	fmt.Println(string(body))
-
 }
