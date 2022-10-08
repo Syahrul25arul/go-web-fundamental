@@ -32,7 +32,7 @@ func TestRequestHeader(t *testing.T) {
 }
 
 func ResponseHeader(w http.ResponseWriter, r *http.Request) {
-	w.Header().Add("X-Powered-By", "Hendrik") // menangkap response header
+	w.Header().Add("X-Powered-By", "Hendrik") // mengirim response header
 	fmt.Fprint(w, "OK")
 }
 
