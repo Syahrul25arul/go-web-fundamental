@@ -1,0 +1,28 @@
+{{/* define digunakan untuk mengganti nama layout saat di parse */}}
+{{define "layout"}}
+    {{/* titik digunakan untuk mengirim semua data ketemplate yang digunakan */}}
+    {{template "header.gohtml" .}}
+    <table>
+    <h1>Hobbies 1</h1>
+    {{with .Hobbies}}
+        <h1>Name : {{.Name}}</h1>
+        <h1>Hobby : {{.Hobby}}</h1>
+    {{else}}
+        <h1>Anda Tidak punya alamat</h1>
+    {{end}}
+
+    <h1>Hobbies 2</h1>
+    {{range $index, $element := .Hobbies2}}
+        <h1>Name : {{$element.Name}}</h1>
+        <h1>Hobby : {{$element.Hobby}}</h1>
+    {{else}}
+        <h1>Anda Tidak punya alamat</h1>
+    {{end}}
+    </table>
+    {{template "footer.gohtml"}}
+{{end}}
+
+
+{{define "test"}}
+    <h1>Test</h1>
+{{end}}
